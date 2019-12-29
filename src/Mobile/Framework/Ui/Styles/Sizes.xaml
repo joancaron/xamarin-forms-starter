@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="Mobile.Framework.Ui.Sizes"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <!--  Text Sizes  -->
+    <x:Double x:Key="Header1Size">96</x:Double>
+    <x:Double x:Key="Header2Size">60</x:Double>
+    <x:Double x:Key="Header3Size">48</x:Double>
+    <x:Double x:Key="Header4Size">34</x:Double>
+    <x:Double x:Key="Header5Size">24</x:Double>
+    <x:Double x:Key="Header6Size">20</x:Double>
+    <x:Double x:Key="HeaderLineHeightSize">1.125</x:Double>
+    <x:Double x:Key="Subtitle1Size">16</x:Double>
+    <x:Double x:Key="Subtitle2Size">14</x:Double>
+    <x:Double x:Key="Subtitle3Size">12</x:Double>
+    <x:Double x:Key="Body1Size">16</x:Double>
+    <x:Double x:Key="Body2Size">14</x:Double>
+    <x:Double x:Key="BodyLineHeightSize">1.50</x:Double>
+    <x:Double x:Key="ButtonSize">14</x:Double>
+    <x:Double x:Key="CaptionSize">12</x:Double>
+    <x:Double x:Key="OverlineSize">10</x:Double>
+
+    <!--  Margin Sizes  -->
+    <x:Double x:Key="ExtraSmallSize">4</x:Double>
+    <x:Double x:Key="SmallSize">8</x:Double>
+    <x:Double x:Key="NormalSize">16</x:Double>
+    <x:Double x:Key="MediumSize">32</x:Double>
+    <x:Double x:Key="LargeSize">48</x:Double>
+    <x:Double x:Key="ExtraLargeSize">64</x:Double>
+
+    <!--  Margin Negative sizes  -->
+    <x:Double x:Key="NegativeExtraSmallSize">-4</x:Double>
+    <x:Double x:Key="NegativeSmallSize">-8</x:Double>
+    <x:Double x:Key="NegativeNormalSize">-16</x:Double>
+    <x:Double x:Key="NegativeMediumSize">-32</x:Double>
+    <x:Double x:Key="NegativeLargeSize">-48</x:Double>
+    <x:Double x:Key="NegativeExtraLargeSize">-64</x:Double>
+
+    <x:Double x:Key="Radius">4</x:Double>
+    <x:Single x:Key="RadiusSingle">4</x:Single>
+
+    <x:Double x:Key="RadiusLarge">12</x:Double>
+    <x:Single x:Key="RadiusLargeSingle">12</x:Single>
+
+    <x:Double x:Key="NavIconSize">24</x:Double>
+    <x:Double x:Key="NavTextSize">16</x:Double>
+    <x:Double x:Key="TabIconSize">24</x:Double>
+</ResourceDictionary>

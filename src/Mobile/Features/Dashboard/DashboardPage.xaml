@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ui:BaseContentPage
+    x:Class="Mobile.Features.Dashboard.DashboardPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:dashboard="clr-namespace:Mobile.Features.Dashboard;assembly=Mobile"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Mobile.Framework.Ui;assembly=Mobile"
+    x:TypeArguments="dashboard:DashboardViewModel"
+    BackgroundColor="{DynamicResource BackgroundColor}"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="{ui:Translate YO}"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ui:BaseContentPage>

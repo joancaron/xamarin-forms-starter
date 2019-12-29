@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<ResourceDictionary
+    x:Class="Mobile.Framework.Ui.Converters"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ui="clr-namespace:Mobile.Framework.Ui;assembly=Mobile">
+    <ui:HasDataConverter x:Key="HasData" />
+    <ui:InverseBoolConverter x:Key="InverseBool" />
+    <ui:ToUpperCaseConverter x:Key="ToUpperCase" />
+    <ui:IsPositiveConverter x:Key="IsPositive" />
+    <ui:IsNonPositiveConverter x:Key="IsNonPositive" />
+</ResourceDictionary>

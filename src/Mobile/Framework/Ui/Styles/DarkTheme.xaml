@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="Mobile.Framework.Ui.DarkTheme"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="PrimaryColor">#ffffff</Color>
+    <Color x:Key="PrimaryVariantColor">#f5f5f5</Color>
+    <Color x:Key="SecondaryColor">#000000</Color>
+    <Color x:Key="SecondaryVariantColor">#262626</Color>
+
+    <Color x:Key="BackgroundColor">#000000</Color>
+
+    <Color x:Key="SurfaceColor">#121212</Color>
+    <Color x:Key="SecondarySurfaceColor">#262626</Color>
+    <Color x:Key="TertiarySurfaceColor">#3c3c3c</Color>
+
+    <Color x:Key="OnPrimaryColor">#000000</Color>
+    <Color x:Key="OnPrimaryHighEmphasisColor">#121212</Color>
+    <Color x:Key="OnPrimaryMediumEmphasisColor">#424242</Color>
+    <Color x:Key="OnPrimaryDisabledColor">#9e9e9e</Color>
+
+    <Color x:Key="OnSurfaceColor">#FFFFFF</Color>
+    <Color x:Key="OnSurfaceHighEmphasisColor">#e0e0Ee</Color>
+    <Color x:Key="OnSurfaceMediumEmphasisColor">#a0a0a0</Color>
+    <Color x:Key="OnSurfaceDisabledColor">#6C6C6C</Color>
+
+    <Color x:Key="ErrorColor">#e49cad</Color>
+    <Color x:Key="InfoColor">#82D2E9</Color>
+    <Color x:Key="WarningColor">#FFCA7F</Color>
+    <Color x:Key="SuccessColor">#afd9bb</Color>
+
+    <Color x:Key="OnErrorColor">#000000</Color>
+    <Color x:Key="OnInfoColor">#000000</Color>
+    <Color x:Key="OnWarningColor">#000000</Color>
+    <Color x:Key="OnSuccessColor">#000000</Color>
+
+    <Color x:Key="TabBarIconUnselectedColor">#555555</Color>
+    <Color x:Key="TabBarIconSelectedColor">#000000</Color>
+
+    <x:Int32 x:Key="Elevation">2</x:Int32>
+</ResourceDictionary>

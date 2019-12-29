@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="Mobile.Framework.Ui.Margins"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ui="clr-namespace:Mobile.Framework.Ui;assembly=Mobile">
+    <ResourceDictionary.MergedDictionaries>
+        <ui:Sizes />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--  Margins  -->
+    <Thickness
+        x:Key="MarginExtraSmall"
+        Bottom="{StaticResource ExtraSmallSize}"
+        Left="{StaticResource ExtraSmallSize}"
+        Right="{StaticResource ExtraSmallSize}"
+        Top="{StaticResource ExtraSmallSize}" />
+
+    <Thickness
+        x:Key="MarginSmall"
+        Bottom="{StaticResource SmallSize}"
+        Left="{StaticResource SmallSize}"
+        Right="{StaticResource SmallSize}"
+        Top="{StaticResource SmallSize}" />
+
+    <Thickness
+        x:Key="MarginNormal"
+        Bottom="{StaticResource NormalSize}"
+        Left="{StaticResource NormalSize}"
+        Right="{StaticResource NormalSize}"
+        Top="{StaticResource NormalSize}" />
+
+    <Thickness
+        x:Key="MarginMedium"
+        Bottom="{StaticResource MediumSize}"
+        Left="{StaticResource MediumSize}"
+        Right="{StaticResource MediumSize}"
+        Top="{StaticResource MediumSize}" />
+
+    <Thickness
+        x:Key="MarginLarge"
+        Bottom="{StaticResource LargeSize}"
+        Left="{StaticResource LargeSize}"
+        Right="{StaticResource LargeSize}"
+        Top="{StaticResource LargeSize}" />
+
+    <Thickness
+        x:Key="MarginExtraLarge"
+        Bottom="{StaticResource ExtraLargeSize}"
+        Left="{StaticResource ExtraLargeSize}"
+        Right="{StaticResource ExtraLargeSize}"
+        Top="{StaticResource ExtraLargeSize}" />
+
+    <Thickness
+        x:Key="ContentMargin"
+        Bottom="{StaticResource SmallSize}"
+        Left="{StaticResource NormalSize}"
+        Right="{StaticResource NormalSize}"
+        Top="{StaticResource SmallSize}" />
+
+    <!--  Negative Margins  -->
+    <Thickness
+        x:Key="NegativeMarginExtraSmall"
+        Bottom="{StaticResource NegativeExtraSmallSize}"
+        Left="{StaticResource NegativeExtraSmallSize}"
+        Right="{StaticResource NegativeExtraSmallSize}"
+        Top="{StaticResource NegativeExtraSmallSize}" />
+
+    <Thickness
+        x:Key="NegativeMarginSmall"
+        Bottom="{StaticResource NegativeSmallSize}"
+        Left="{StaticResource NegativeSmallSize}"
+        Right="{StaticResource NegativeSmallSize}"
+        Top="{StaticResource NegativeSmallSize}" />
+
+    <Thickness
+        x:Key="NegativeMarginNormal"
+        Bottom="{StaticResource NegativeNormalSize}"
+        Left="{StaticResource NegativeNormalSize}"
+        Right="{StaticResource NegativeNormalSize}"
+        Top="{StaticResource NegativeNormalSize}" />
+
+    <Thickness
+        x:Key="NegativeMarginMedium"
+        Bottom="{StaticResource NegativeMediumSize}"
+        Left="{StaticResource NegativeMediumSize}"
+        Right="{StaticResource NegativeMediumSize}"
+        Top="{StaticResource NegativeMediumSize}" />
+
+    <Thickness
+        x:Key="NegativeMarginLarge"
+        Bottom="{StaticResource NegativeLargeSize}"
+        Left="{StaticResource NegativeLargeSize}"
+        Right="{StaticResource NegativeLargeSize}"
+        Top="{StaticResource NegativeLargeSize}" />
+
+    <Thickness
+        x:Key="NegativeMarginExtraLarge"
+        Bottom="{StaticResource NegativeExtraLargeSize}"
+        Left="{StaticResource NegativeExtraLargeSize}"
+        Right="{StaticResource NegativeExtraLargeSize}"
+        Top="{StaticResource NegativeExtraLargeSize}" />
+
+</ResourceDictionary>

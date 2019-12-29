@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="Mobile.Framework.Ui.Fonts"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <OnPlatform x:Key="MDIcons" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="Material Design Icons" />
+        <On Platform="Android" Value="mdicons.ttf#Material Design Icons" />
+    </OnPlatform>
+
+    <OnPlatform x:Key="RegularFontFamily" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="sans-serif" />
+        <On Platform="Android" Value="HelveticaNeue" />
+    </OnPlatform>
+
+    <OnPlatform x:Key="LightFontFamily" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="sans-serif-light" />
+        <On Platform="Android" Value="HelveticaNeue-Light" />
+    </OnPlatform>
+
+    <OnPlatform x:Key="BoldFontFamily" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="HelveticaNeue-Medium" />
+        <On Platform="Android" Value="sans-serif-medium" />
+    </OnPlatform>
+
+</ResourceDictionary>
