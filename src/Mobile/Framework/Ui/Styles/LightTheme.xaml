@@ -35,8 +35,5 @@
     <Color x:Key="OnWarningColor">#000000</Color>
     <Color x:Key="OnSuccessColor">#000000</Color>
 
-    <Color x:Key="TabBarIconUnselectedColor">#555555</Color>
-    <Color x:Key="TabBarIconSelectedColor">#000000</Color>
-
     <x:Int32 x:Key="Elevation">2</x:Int32>
 </ResourceDictionary>

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Mobile.Framework.Core;
 using Mobile.Framework.Core.Helpers;
+using Mobile.Framework.Core.Logging;
 using Mobile.Framework.Core.Settings;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -59,6 +60,17 @@ namespace Mobile
 			services.AddMediatR(typeof(Startup));
 			services.AddAutoMapper(typeof(Startup));
 			services.AddSingleton<App>();
+
+			if (App.Configuration.Stage != Stage.Local)
+			{
+				services.AddSingleton<IErrorLogger, AppCenterErrorLogger>();
+				services.AddSingleton<IAnalyticsLogger, AppCenterAnalyticsLogger>();
+			}
+			else
+			{
+				services.AddSingleton<IErrorLogger, DebugErrorLogger>();
+				services.AddSingleton<IAnalyticsLogger, DebugAnalyticsLogger>();
+			}
 
 			// All viewmodels following the convention will be automatically registered (class name ends with ViewModel)
 			var viewModelTypes =

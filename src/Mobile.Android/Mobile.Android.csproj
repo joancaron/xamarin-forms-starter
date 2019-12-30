@@ -205,9 +205,9 @@
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\SharedItems\LinkDescription.xml">
+    <None Include="..\SharedItems\LinkDescription.xml">
       <Link>LinkDescription.xml</Link>
-    </Content>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-night\styles.xml" />

@@ -239,9 +239,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\SharedItems\LinkDescription.xml">
+    <None Include="..\SharedItems\LinkDescription.xml">
       <Link>LinkDescription.xml</Link>
-    </Content>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>

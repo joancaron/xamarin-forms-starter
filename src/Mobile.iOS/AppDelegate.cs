@@ -4,6 +4,7 @@ using System.Linq;
 using FFImageLoading.Forms.Platform;
 using FFImageLoading.Svg.Forms;
 using Foundation;
+using Rg.Plugins.Popup;
 using UIKit;
 
 namespace Mobile.iOS
@@ -28,7 +29,9 @@ namespace Mobile.iOS
             CachedImageRenderer.Init();
             var ignore = typeof(SvgCachedImage);
 
-            LoadApplication(Startup.Init(PlatformServicesRegistrar.ConfigureServices));
+            Popup.Init();
+
+			LoadApplication(Startup.Init(PlatformServicesRegistrar.ConfigureServices));
 
             return base.FinishedLaunching(app, options);
         }

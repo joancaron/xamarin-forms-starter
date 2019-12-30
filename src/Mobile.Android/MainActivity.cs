@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Runtime;
 using FFImageLoading.Forms.Platform;
 using Plugin.CurrentActivity;
+using Rg.Plugins.Popup;
 
 namespace Mobile.Droid
 {
@@ -32,6 +33,8 @@ namespace Mobile.Droid
 
 			CrossCurrentActivity.Current.Init(this, savedInstanceState);
 
+			Popup.Init(this, savedInstanceState);
+
 			LoadApplication(Startup.Init(PlatformServicesRegistrar.ConfigureServices));
 		}
 
@@ -41,6 +44,12 @@ namespace Mobile.Droid
 			Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
 			base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+		}
+
+		public override void OnBackPressed()
+		{
+			base.OnBackPressed();
+			Popup.SendBackPressed(base.OnBackPressed);
 		}
 	}
 }
