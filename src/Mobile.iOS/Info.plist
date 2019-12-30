@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>AppCenter Local</string>
+	<string>AppMeta Local</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.joancaron.appcenterlocal</string>
 	<key>CFBundleVersion</key>
@@ -31,20 +31,29 @@
 	<key>CFBundleName</key>
 	<string>Mobile</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>0.1.0</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcons.appiconset</string>
-    <key>UILaunchStoryboardName</key>
-    <string>LaunchScreen</string>
-    <key>UIAppFonts</key>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>mdicons.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+    <key>CFBundleURLTypes</key>
     <array>
-        <string>mdicons.ttf</string>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>appcenter-#{appcenter_ios_key}</string>
+            </array>
+        </dict>
     </array>
-    <key>UIBackgroundModes</key>
-    <array>
-        <string>fetch</string>
-    </array>
-    <key>UIViewControllerBasedStatusBarAppearance</key>
-    <false/>
 </dict>
 </plist>
