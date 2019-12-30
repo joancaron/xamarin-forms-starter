@@ -1,1 +1,1 @@
-# Starter template for my xamarin forms oss apps
+# Starter template for xamarin forms
