@@ -2,7 +2,6 @@
 using Android.App;
 using Android.Content;
 using Android.Content.Res;
-using Android.Graphics;
 using Android.OS;
 using Android.Views;
 using Mobile.Framework.Core;
@@ -78,6 +77,7 @@ namespace Mobile.Droid.Services
 			window.ClearFlags(WindowManagerFlags.TranslucentStatus);
 			window.SetStatusBarColor(background.ToAndroid());
 			window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
+			
 			if (Build.VERSION.SdkInt < BuildVersionCodes.M)
 			{
 				return;

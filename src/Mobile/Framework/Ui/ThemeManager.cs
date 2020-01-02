@@ -1,35 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using AsyncAwaitBestPractices;
 using Mobile.Framework.Core;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Mobile.Framework.Ui
 {
-	public class ThemeManager
+	public static class ThemeManager
 	{
-		readonly WeakEventManager<Themes> _themeChangedEventManager = new WeakEventManager<Themes>();
-		public event EventHandler<Themes> ThemeChanged
-		{
-			add => _themeChangedEventManager.AddEventHandler(value);
-			remove => _themeChangedEventManager.RemoveEventHandler(value);
-		}
-
 		static readonly IPlatform Platform;
+		static readonly WeakEventManager<Themes> ThemeChangedEventManager = new WeakEventManager<Themes>();
 
 		static ThemeManager()
 		{
 			Platform = DependencyInjectionHelper.Instance.GetService<IPlatform>();
 		}
 
-		public static void SetTheme(Themes theme = Themes.UnSpecified)
+		public static event EventHandler<Themes> ThemeChanging
 		{
-			if (theme == Themes.UnSpecified)
+			add => ThemeChangedEventManager.AddEventHandler(value);
+			remove => ThemeChangedEventManager.RemoveEventHandler(value);
+		}
+
+		public static event EventHandler<Themes> ThemeChanged
+		{
+			add => ThemeChangedEventManager.AddEventHandler(value);
+			remove => ThemeChangedEventManager.RemoveEventHandler(value);
+		}
+
+		public static bool SupportsAutomaticTheme
+		{
+			get;
+		} = DeviceInfo.Version >= (DeviceInfo.Platform == DevicePlatform.Android
+			    ? new Version(10, 0)
+			    : new Version(13, 0));
+
+		public static void InitializeTheme()
+		{
+			var currentTheme = AppPreferences.Theme;
+
+			if (currentTheme == Themes.Auto)
 			{
-				theme = Platform.GetOperatingSystemTheme();
+				if (SupportsAutomaticTheme)
+				{
+					currentTheme = Platform.GetOperatingSystemTheme();
+				}
+				else
+				{
+					currentTheme = AppPreferences.Theme = Themes.Light;
+				}
 			}
+
+			SetTheme(currentTheme);
+		}
+
+		public static void SetTheme(Themes theme)
+		{
+			ThemeChangedEventManager.HandleEvent(null, AppPreferences.Theme, nameof(ThemeChanging));
 
 			var resources = Application.Current.Resources;
 			var mergedDictionaries = resources.MergedDictionaries;
@@ -56,11 +84,14 @@ namespace Mobile.Framework.Ui
 					}
 
 					mergedDictionaries.Add(new LightTheme());
-					
+
 					break;
 			}
+
 			var background = (Color)resources["SurfaceColor"];
 			Platform.SetStatusBarColor(background, theme != Themes.Dark);
+
+			ThemeChangedEventManager.HandleEvent(null, theme, nameof(ThemeChanged));
 		}
 	}
 }

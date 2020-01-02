@@ -2,6 +2,7 @@
 {
     public static class FontKeys
     {
+        public const string AppIcons = nameof(AppIcons);
         public const string MDIcons = nameof(MDIcons);
         public const string RegularFontFamily = nameof(RegularFontFamily);
         public const string LightFontFamily = nameof(LightFontFamily);

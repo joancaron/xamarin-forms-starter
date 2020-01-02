@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>AppMeta Local</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.joancaron.appcenterlocal</string>
+	<string>com.joancaron.appmetalocal</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>CFBundleName</key>
@@ -39,6 +39,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>mdicons.ttf</string>
+        <string>appmeta.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
@@ -46,14 +47,14 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>appcenter-#{appcenter_ios_key}</string>
-            </array>
-        </dict>
-    </array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>appcenter-#{appcenter_ios_key}</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

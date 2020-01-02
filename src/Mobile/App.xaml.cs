@@ -24,10 +24,7 @@ namespace Mobile
                 "SwipeView_Experimental"
             });
 
-			
 			MainPage = new AppShell();
-			
-
 		}
 
 		public static AppConfiguration Configuration { get; set; }
@@ -35,8 +32,10 @@ namespace Mobile
         protected override void OnStart()
         {
 			base.OnStart();
-			ThemeManager.SetTheme();
-			Configuration.IsInBackground = false;
+
+            ThemeManager.InitializeTheme();
+
+            Configuration.IsInBackground = false;
 
             if (Configuration.Stage != Stage.Local)
             {

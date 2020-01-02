@@ -76,6 +76,12 @@ namespace Mobile.iOS.Services
 
 		public void SetStatusBarColor(Color background, bool hasDarkTint)
 		{
+			UIApplication.SharedApplication.SetStatusBarStyle(
+				hasDarkTint
+					? UIStatusBarStyle.DarkContent
+					: UIStatusBarStyle.LightContent,
+				true);
+			GetVisibleViewController().SetNeedsStatusBarAppearanceUpdate();
 		}
 
 		static UIViewController GetVisibleViewController()

@@ -13,6 +13,7 @@ using Mobile.Framework.Core.Settings;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
+using Realms;
 using Xamarin.Essentials;
 
 namespace Mobile
@@ -24,7 +25,7 @@ namespace Mobile
 			JsonConvert.DefaultSettings = () => new JsonSerializerSettings()
 			{
 				ContractResolver = new CamelCasePropertyNamesContractResolver(),
-				Converters = {new StringEnumConverter()}
+				Converters = { new StringEnumConverter() }
 			};
 
 			var systemDir = FileSystem.CacheDirectory;
@@ -34,7 +35,7 @@ namespace Mobile
 			var host = new HostBuilder().ConfigureHostConfiguration(
 				c =>
 				{
-					c.AddCommandLine(new[] {$"ContentRoot={FileSystem.AppDataDirectory}"});
+					c.AddCommandLine(new[] { $"ContentRoot={FileSystem.AppDataDirectory}" });
 					c.AddJsonFile(appConfig);
 					c.AddJsonFile(secretsConfig);
 				}).ConfigureServices(
@@ -57,6 +58,11 @@ namespace Mobile
 
 		static void ConfigureServices(HostBuilderContext ctx, IServiceCollection services)
 		{
+			services.AddTransient<Realm>(provider => Realm.GetInstance(new RealmConfiguration()
+			{
+				ShouldDeleteIfMigrationNeeded = App.Configuration.IsInDebugMode
+			}));
+
 			services.AddMediatR(typeof(Startup));
 			services.AddAutoMapper(typeof(Startup));
 			services.AddSingleton<App>();

@@ -2,7 +2,9 @@
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.App;
 using FFImageLoading.Forms.Platform;
+using Mobile.Framework.Ui;
 using Plugin.CurrentActivity;
 using Rg.Plugins.Popup;
 
@@ -36,6 +38,23 @@ namespace Mobile.Droid
 			Popup.Init(this, savedInstanceState);
 
 			LoadApplication(Startup.Init(PlatformServicesRegistrar.ConfigureServices));
+
+			ThemeManager.ThemeChanging += OnThemeChanging;
+		}
+
+		void OnThemeChanging(object sender, Themes theme)
+		{
+			var nightMode = AppCompatDelegate.ModeNightFollowSystem;
+			if (theme == Themes.Light)
+			{
+				nightMode = AppCompatDelegate.ModeNightNo;
+			}
+			else if(theme == Themes.Dark)
+			{
+				nightMode = AppCompatDelegate.ModeNightYes;
+			}
+
+			Delegate.SetLocalNightMode(nightMode);
 		}
 
 		public override void OnRequestPermissionsResult(int requestCode, string[] permissions,

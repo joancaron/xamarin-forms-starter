@@ -11,11 +11,10 @@
     BackgroundColor="{DynamicResource BackgroundColor}"
     mc:Ignorable="d">
     <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="{ui:Translate YO}"
-                VerticalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+			<Button Text="Auto" Clicked="Button_OnClicked"></Button>
+			<Button x:Name="Light" Text="Light" Clicked="Light_OnClicked"></Button>
+			<Button x:Name="Dark" Text="Dark" Clicked="Dark_OnClicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ui:BaseContentPage>

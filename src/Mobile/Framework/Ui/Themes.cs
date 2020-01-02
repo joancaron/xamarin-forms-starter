@@ -2,8 +2,6 @@
 {
 	public enum Themes
 	{
-		UnSpecified,
-
 		Auto,
 
 		Light,

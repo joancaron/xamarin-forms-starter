@@ -1,4 +1,5 @@
-﻿using Mobile.Framework.Ui;
+﻿using Mobile.Framework.Core;
+using Mobile.Framework.Ui;
 using Mobile.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
@@ -14,8 +15,13 @@ namespace Mobile.iOS.Renderers
 		{
 			base.TraitCollectionDidChange(previousTraitCollection);
 
+			if (AppPreferences.Theme != Themes.Auto)
+			{
+				return;
+			}
 
-			if (TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
+			if (previousTraitCollection != null 
+			    && TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
 			{
 				ThemeManager.SetTheme(TraitCollection.UserInterfaceStyle == UIUserInterfaceStyle.Dark
 					? Themes.Dark
